@@ -36,7 +36,7 @@
     "react-router-dom": "6.0.0-beta.0"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider craco start",
     "start:dev": "yarn && yarn start",
     "lint": "prettier -c 'src/**/*.{ts,tsx}' && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.{ts,tsx}'",
