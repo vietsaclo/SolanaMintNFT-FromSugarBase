@@ -1,1 +1,1 @@
-# SolanaMintNFT-FromSugarBase
+# Metaplex Candy Machine Reference UI
