@@ -14,12 +14,25 @@ const UseContractMintNFTsCatHook = () => {
       "method": "qn_fetchNFTs",
       "params": {
         "wallet": `${userWallet}`,
-        "omitFields": [],
+        "omitFields": [
+          "provenance",
+          "traits"
+        ],
         "page": 1,
-        "perPage": 10
+        "perPage": 100,
       }
     };
-    const nfts = await axios.post(Apis.RPC_END_POIN, data, config);
+    const raws = await axios.post(Apis.RPC_END_POIN, data, config);
+    if (raws.status !== 200) return [];
+
+    const rawsNFTs = raws.data.result.assets;
+    const nfts: any[] = [];
+    for (let i = 0; i < rawsNFTs.length; i++) {
+      if (rawsNFTs[i].collectionAddress === Apis.COLLECTION_ID) {
+        nfts.push(rawsNFTs[i]);
+      }
+    }
+
     return nfts;
   }
 
