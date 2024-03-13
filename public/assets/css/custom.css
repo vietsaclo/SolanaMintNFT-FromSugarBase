@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Comicon";
+  src: url(../css/fonts/Comicon.otf);
+}
+
+@font-face {
+  font-family: "Comicon";
+  src: url(../css/fonts/Comicon-Bold.otf);
+  font-weight: bold;
+}
+
+.mint-page {
+  height: 100vh;
+  max-height: 100vh;
+  background-image: url(../images/bg_mint_v3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  padding: 14rem 0 10rem;
+}
