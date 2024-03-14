@@ -42,7 +42,7 @@ const MyInventory = () => {
       const valueTest = v.name.length > 7 ? v.name.substring(0, 7) : v.name;
 
       return (
-        <div key={k} className="col-12 col-md-6 col-lg-3 mb-4">
+        <div key={k} className="col-12 col-md-6 col-lg-4 col-xl-3">
           <div className="card inventory-card">
             <img style={{ minHeight: '324px' }} src={v.imageUrl} className="card-img-top" alt={`NFT_${name}`} />
             <div className="mt-3 mb-1 inventory-card__ttl d-flex align-items-center justify-content-between">
@@ -90,7 +90,7 @@ const MyInventory = () => {
     <div className="inventory-page">
       <div className="container">
         <h2 className="mt-5 inventory-page__ttl">My Inventory</h2>
-        <div className="row mt-5 pb-5">
+        <div className="row mt-5 pb-5 g-3">
           {renderCards()}
         </div>
       </div>
