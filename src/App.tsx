@@ -12,13 +12,8 @@ import {
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 
 import { createTheme, ThemeProvider } from "@mui/material";
-import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
 import { SlopeWalletAdapter } from "@solana/wallet-adapter-slope";
 import { SolflareWalletAdapter } from "@solana/wallet-adapter-solflare";
-import {
-  SolletWalletAdapter,
-  SolletExtensionWalletAdapter,
-} from "@solana/wallet-adapter-sollet";
 import HomeNew from "./HomeNew";
 import InventoryPage from "./InventoryPage";
 import { useRoutes } from "react-router";
@@ -69,11 +64,8 @@ const App = () => {
 
   const wallets = useMemo(
     () => [
-      new PhantomWalletAdapter(),
       new SolflareWalletAdapter({ network }),
       new SlopeWalletAdapter(),
-      new SolletWalletAdapter({ network }),
-      new SolletExtensionWalletAdapter({ network }),
     ],
     []
   );
